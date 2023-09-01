@@ -19,4 +19,4 @@ de Porcesos dictado en la Escuela de Ingeniería Química de la Universidad Naci
 - Semana 12: Controlador PID, Acción Proporcional, Integral y Derivativa
 - Semana 13: Estructuras avanzadas de control
 - Semana 14: Introducción al aprendizaje automático
-- Semana 15: Examen Parcuial III
+- Semana 15: Examen Parcial III
