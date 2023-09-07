@@ -4,6 +4,7 @@ print('PRACTICA 1 - INTRODUCCION AL SOFTWARE DE CALCULO')
 ## PROBLEMA 1
 print('\nPROBLEMA 1\n')
 # a. Condiciones normales (25 C, 1 atm)
+print('a. Condiciones normales (25 C, 1 atm)')
 P  = 1 # atm
 T  = 25+273.15 # K
 R  = 0.08205746 # atm.L/mol.K
@@ -12,6 +13,7 @@ print('Presion = {:1.6g} atm'.format(P))
 print('Temperatura = {:1.6g} K'.format(T))
 print('Volumen Molar = {:1.6g} L/mol'.format(Vm))
 # b. Condiciones estandar (0 C, 1 atm)
+print('b. Condiciones estandar (0 C, 1 atm)')
 P  = 1 # atm
 T  = 273.15 # K
 R  = 0.08205746 # atm.L/mol.K
@@ -20,6 +22,7 @@ print('Presion = {:1.6g} atm'.format(P))
 print('Temperatura = {:1.6g} K'.format(T))
 print('Volumen Molar = {:1.6g} L/mol'.format(Vm))
 # c. Condiciones (1000 C, 1 atm)
+print('c. Condiciones (1000 C, 1 atm)')
 P  = 1 # atm
 T  = 1000+273.15 # K
 R  = 0.08205746 # atm.L/mol.K
@@ -50,7 +53,7 @@ V_SO2 = n_SO2*R*T/P # L
 print('Volumen de SO2 = {:1.6g} L'.format(V_SO2))
 # ppm de SO2
 ppm_SO2 = V_SO2/V_air*10**6
-print('ppm de SO2 = {:1.6g}',format(ppm_SO2))
+print('ppm de SO2 = {:1.6g}'.format(ppm_SO2))
 ## PROBLEMA 3
 print('\nPROBLEMA 3\n')
 # Peso molecular del NO
