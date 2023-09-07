@@ -5,27 +5,30 @@ fprintf('PRACTICA 1 - INTRODUCCION AL SOFTWARE DE CALCULO \n')
 %% PROBLEMA 1
 fprintf('\nPROBLEMA 1 \n')
 % a. Condiciones normales (25 C, 1 atm)
+fprintf('a. Condiciones normales (25 C, 1 atm) \n')
 P  = 1; % atm
 T  = 25+273.15; % K
 R  = 0.08205746; % atm.L/mol.K
 Vm = R.*T./P; % L/mol
-fprintf('Presion = %1.2g atm \n',P)
+fprintf('Presion = %1.6g atm \n',P)
 fprintf('Temperatura = %1.6g K \n',T)
 fprintf('Volumen Molar = %1.6g L/mol \n',Vm)
 % b. Condiciones estandar (0 C, 1 atm)
+fprintf('b. Condiciones estandar (0 C, 1 atm) \n')
 P  = 1; % atm
 T  = 273.15; % K
 R  = 0.08205746; % atm.L/mol.K
 Vm = R.*T./P; % L/mol
-fprintf('Presion = %1.2g atm \n',P)
+fprintf('Presion = %1.6g atm \n',P)
 fprintf('Temperatura = %1.6g K \n',T)
 fprintf('Volumen Molar = %1.6g L/mol \n',Vm)
 % c. Condiciones (1000 C, 1 atm)
+fprintf('c. Condiciones (1000 C, 1 atm) \n')
 P  = 1; % atm
 T  = 1000+273.15; % K
 R  = 0.08205746; % atm.L/mol.K
 Vm = R.*T./P; % L/mol
-fprintf('Presion = %1.2g atm \n',P)
+fprintf('Presion = %1.6g atm \n',P)
 fprintf('Temperatura = %1.6g K \n',T)
 fprintf('Volumen Molar = %1.6g L/mol \n',Vm)
 %% PROBLEMA 2
