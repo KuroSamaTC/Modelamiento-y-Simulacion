@@ -22,7 +22,7 @@ plt.figure(figsize=(8, 6))
 x = np.linspace(0,1) # Fraccion mol del componente ligero en la fase líquida
 plt.plot(x, x, label='Linea de 45 grados', linestyle='--', color='cyan')
 y = a*x/(1+x*(a-1)) # Fraccion mol del componente ligero en la fase vapor
-plt.plot(x, y, label='Linea de Equilibrio', color='red') # Grafica y en funcion de x en ELV
+plt.plot(x, y, label='Curva de Equilibrio', color='red') # Grafica y en funcion de x en ELV
 ## Ecuacion linea q (y=m*x+n)
 m = q/(q-1)
 n = xf-m*xf
