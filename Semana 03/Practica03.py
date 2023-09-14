@@ -1,6 +1,6 @@
 ## Practica 3 - Modelizacion en base a datos experimentales
 # Autor: Bruno Fernando Reyes Iglesias
-print('PRACTICA 2 - MODELIZACION EN BASE A DATOS EXPERIMENTALES')
+print('PRACTICA 3 - MODELIZACION EN BASE A DATOS EXPERIMENTALES')
 ## Uso de scipy para ajuste de curva con datos experimentales
 import numpy as np
 import matplotlib.pyplot as plt
