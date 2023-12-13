@@ -1,7 +1,7 @@
 # Modelamiento-y-Simulacion
 Repositorio sobre clases de Modelamiento y Simulación de Procesos para Ingeniería Química. Autor: Reyes Iglesias Bruno F.
 
-Este repositorio es un trabajo en progreso sobre los temas desarrollados en le curso de Modelamiento, Simulación y Control 
+Este repositorio es un trabajo en progreso sobre los temas desarrollados en el curso de Modelamiento, Simulación y Control 
 de Porcesos dictado en la Escuela de Ingeniería Química de la Universidad Nacional de Trujillo Perú
 
 # TEMAS
