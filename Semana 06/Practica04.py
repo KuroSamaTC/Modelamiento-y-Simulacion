@@ -18,12 +18,12 @@ g = 32  # ft/s^2  Aceleración por gravedad
 # 1. A volumen constante de 250 ft^3
 VR = 250  # ft^3  Volumen del reactor en estado estacionario
 tau = VR/V0  # s  Tiempo de residencia
-def modelo1(t,CA,k,tau,CA0):
+def modelo1(CA,t):
     dCAdt = (CA0-CA-k*(CA**2)*tau)/tau
     return dCAdt
 tspan = np.linspace(0,50,101)  # Intervalo de tiempo
 x0 = CA0  # Concentración inicial de A
-sol = odeint(modelo1,x0,tspan,args=(k,tau,CA0))
+sol = odeint(modelo1,x0,tspan)
 print(sol)
 plt.plot(tspan,sol[:,0])
 plt.show()
