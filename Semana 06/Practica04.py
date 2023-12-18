@@ -1,10 +1,11 @@
 ## Práctica 4 - Análisis de un CSTR
 # Autor: Bruno Fernando Reyes Iglesias
-## Librerías usadas
+
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
+# Datos
 CA0 = 1  # lbmol/ft^3  Concentración en la alimentación
 F = 7.67  # lbmol/s  Flujo molar
 k = 0.311  # ft^3/lbmol*s  Constante cinética
@@ -36,12 +37,11 @@ sol2 = odeint(modelo2, X0, t2)
 # Resultados
 print('PRÁCTICA 4 - ANÁLISIS DE UN CSTR\n')
 print('1. A volumen constante con VR = 250 ft^3')
-print(f'Concentración de A a la salida en estado estacionario  : {sol1[-1,0]:.5f} lbmol/ft^3\n')
+print(f'Concentración de A a la salida en estado estacionario : {sol1[-1,0]:.5f} lbmol/ft^3\n')
 print('2. A volumen variable con VR0 = 250 ft^3')
-print(f'Concentración de A a la salida en estado estacionario  : {sol2[-1,0]:.5f} lbmol/ft^3')
+print(f'Concentración de A a la salida en estado estacionario : {sol2[-1,0]:.5f} lbmol/ft^3')
 print(f'Volumen del reactor en estado estacionario : {sol2[-1,1]:.5f} ft^3\n')
 
-# Grafica de las respuestas
 plt.figure(1)
 plt.plot(t1,sol1,'-r',label='Concentración de A')
 plt.xlabel('Tiempo (s)')
