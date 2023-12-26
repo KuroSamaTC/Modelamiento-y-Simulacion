@@ -1,4 +1,4 @@
-## Ejercicios sobre calentamiento de una placa
+## Ejercicio sobre calentamiento de una placa
 # Autor: Bruno Fernando Reyes Iglesias
 
 import numpy as np
