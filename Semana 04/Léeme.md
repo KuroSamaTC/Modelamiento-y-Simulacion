@@ -1,0 +1,1 @@
+Se supendieron las actividades en la Universidad debido a una huelga.
