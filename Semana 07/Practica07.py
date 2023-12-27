@@ -22,12 +22,12 @@ t = sp.symbols('t')
 T = sp.Function('T')
 
 # Ecuación diferencial y condición inicial
-eqn = T(t).diff(t)-(Q/V)*(Te+q/(p*Q*Ce)-T(t))
+eqn = sp.Eq(T(t).diff(t), (Q/V)*(Te+q/(p*Q*Ce)-T(t)))
 cond = {T(0): T0}
 Tsol = sp.dsolve(eqn, T(t), ics=cond)
-Tsol1 = Tsol.subs(t, 36000)
+Tsol1 = Tsol.args[1].subs(t, 36000)
 Tsol1 = Tsol1.evalf() # Temperatura a las 10 horas
-print(f'Temperatura en 10 horas (solución analítica): {Tsol1}')
+print(f'Temperatura en 10 horas (solución analítica): {Tsol1:.4f} °C')
 
 # Resolución numérica usando odeint
 def model(x, t):
@@ -37,12 +37,13 @@ tspan = np.linspace(0, 36000, 1000) #  Tiempo 10 horas
 x = odeint(model, x0, tspan)
 
 # Temperatura al estado estacionario
+T = sp.symbols('T')
 T_steady = sp.solve((Q/V)*(Te+q/(p*Q*Ce)-T))[0]
 T_steady = T_steady.evalf()
-print(f'Temperatura al estado estacionario: {T_steady}')
+print(f'Temperatura al estado estacionario: {T_steady:.4f} °C')
 
 # Tiempo en el que alcanza el 99% del valor estacionario
-T_steady_99 = Tsol-T_steady*0.99
+T_steady_99 = sp.Eq(Tsol.args[1], T_steady*0.99)
 t_99 = sp.solve(T_steady_99)[0]/3600 # Tiempo en el que alcanza el 99% estacionario
 print(f'Tiempo en el que alcanza 0.99 de la Temp. en estacionario: {t_99}')
 
