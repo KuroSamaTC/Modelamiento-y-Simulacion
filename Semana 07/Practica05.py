@@ -1,4 +1,4 @@
-## Práctica 7 - Tanque calentado por resistencia
+## Práctica 5 - Tanque calentado por resistencia
 # Autor: Bruno Fernando Reyes Iglesias
 
 import numpy as np
@@ -36,16 +36,6 @@ x0 = T0 #  Condición inicial
 tspan = np.linspace(0, 36000, 1000) #  Tiempo 10 horas
 x = odeint(model, x0, tspan)
 
-# Gráfico
-time = tspan/3600 #  Vector con tiempo en horas
-plt.plot(time, x, '-r', label='Temperatura °C')
-plt.ylabel('T(t) (°C)')
-plt.xlabel('t/3600 (h)')
-plt.axis([0, 10, 20, 100])
-plt.title('Cambio de la temperatura en el tanque')
-plt.legend()
-plt.grid()
-
 # Temperatura al estado estacionario
 T = sp.symbols('T')
 T_steady = sp.solve((Q/V)*(Te+q/(p*Q*Ce)-T))[0]
@@ -57,4 +47,13 @@ T_steady_99 = sp.Eq(Tsol.args[1] - T_steady*0.99, 0)
 t_99 = sp.nsolve(T_steady_99, t, 1)/3600 # Tiempo en el que alcanza el 99% estacionario
 print(f'Tiempo en el que alcanza 0.99 de la Temp. en estacionario: {t_99:.4f} h')
 
+# Gráfico
+time = tspan/3600 #  Vector con tiempo en horas
+plt.plot(time, x, '-r', label='Temperatura °C')
+plt.ylabel('T(t) (°C)')
+plt.xlabel('t/3600 (h)')
+plt.axis([0, 10, 20, 100])
+plt.title('Cambio de la temperatura en el tanque')
+plt.legend()
+plt.grid()
 plt.show()
