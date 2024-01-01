@@ -50,7 +50,7 @@ while t < tkon:
     # Gráfica
     plt.clf()
     plt.pcolor(np.flipud(Tpoc), cmap='jet')
-    titulo = 'Tiempo = {} s'.format(t)
+    titulo = 'Tiempo = {:.4f} s'.format(t)
     plt.title(titulo)
     plt.colorbar()
     plt.gca().set_aspect('equal', adjustable='box')
